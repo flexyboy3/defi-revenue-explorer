@@ -58,7 +58,7 @@ export async function getProtocolFeeHistory(protocolName) {
 
     return {
       name: data.name || protocolName,
-      category: data.category || "Unknown",
+      category: data.category || data.type || data.module || "DeFi Protocol",
       chains: data.chains || [],
       fees30d: data.total30d || 0,
       revenue30d: data.totalRevenue30d || 0,
